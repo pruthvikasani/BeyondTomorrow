@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:onClick="hideKeyboard">
+        <!--Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/blue"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="false"
+                android:background="@color/newcolor"
+                android:scaleType="fitStart"
+                android:src="@drawable/logo"
+                android:layout_weight="1"></ImageView>
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@color/blue"-->
+                <!--android:fontFamily="sans-serif"-->
+                <!--android:text="@string/app_name"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="35sp"-->
+                <!--android:textStyle="bold"-->
+                <!--android:layout_weight="0.5">-->
+            <!--</TextView>-->
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="false"
+                android:background="@drawable/mainlogo1"
+                android:layout_weight="0">
+
+
+            </ImageView>
+        </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/question1"
+                android:textAlignment="textStart"
+                android:textColor="@color/body"
+                android:textSize="24sp">
+            </TextView>
+
+    <RatingBar
+        android:id="@+id/ratingbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:numStars="5"
+        android:onClick="onClick"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        android:theme="@style/MyRatingBar"></RatingBar>
+
+
+            <!--Text that returns the rating star value-->
+
+                <TextView
+                    android:id="@+id/value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="120dp"
+                    android:textColor="@color/blue">
+                </TextView>
+                <!--<TextView-->
+                    <!--android:id="@+id/value2"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:textColor="@color/body">-->
+                <!--</TextView>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/value3"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:textColor="@color/body">-->
+                <!--</TextView>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/value4"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:textColor="@color/body">-->
+                <!--</TextView>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/value5"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:textColor="@color/body">-->
+                <!--</TextView>-->
+
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/question2"
+            android:textAlignment="textStart"
+            android:textColor="@color/body"
+            android:textSize="24sp">
+            </TextView>
+
+        <!--Layout that has Checkbox and Spinner    -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_weight="3">
+
+            <CheckBox
+                android:id="@+id/YesCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:gravity="left"
+                android:layout_marginTop="10dp"
+                android:checked="false"
+                android:text="Yes"
+                android:textColor="@color/body"
+                android:textSize="24sp"
+                android:theme="@style/checkBoxStyle"
+                android:layout_weight="1">
+            </CheckBox>
+            <TextView
+                android:id="@+id/techid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Technology : "
+                android:textColor="@color/body"
+                android:textSize="24sp"
+                android:visibility="gone"
+                android:layout_weight="1">
+            </TextView>
+            <!--<Spinner-->
+                <!--android:id="@+id/spinner"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="400dp"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:dropDownWidth="wrap_content"-->
+                <!--android:entries="@array/tech_arrays"-->
+                <!--android:visibility="gone">-->
+            <!--</Spinner>-->
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+
+        <!--Technology Elaboration-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/TechElab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/def"
+                android:layout_margin="20dp"
+                android:visibility="gone"
+                app:counterEnabled="true"
+                app:counterMaxLength="200"
+                app:errorEnabled="true"
+                app:counterTextAppearance="@style/CounterText"
+                app:hintTextAppearance="@style/HintText"
+                app:counterOverflowTextAppearance="@style/CounterOverFlow"
+                app:errorTextAppearance="@style/ErrorText">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/errorEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/elaboration"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:maxLines="4"
+                    android:lines="4"
+                    android:minLines="1"
+                    android:textColor="@color/body"
+                    android:textColorHint="@color/def"
+                    android:textSize="22sp"
+                    >
+                </android.support.design.widget.TextInputEditText>
+            </android.support.design.widget.TextInputLayout>
+
+
+       <!--Layout having Name, Email and Contact-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:weightSum="3">
+
+            <!--Name-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_margin="20dp"
+                android:textColorHint="@color/def"
+                android:visibility="gone"
+                android:layout_weight="1"
+                app:hintTextAppearance="@style/HintText">
+                <EditText
+                    android:id="@+id/editname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name"
+                    android:inputType="textCapSentences"
+                    android:textColor="@color/body">
+                </EditText>
+            </android.support.design.widget.TextInputLayout>
+
+            <!--Email-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/def"
+                android:visibility="gone"
+                android:layout_weight="1"
+                android:layout_margin="20dp"
+                app:hintTextAppearance="@style/HintText">
+                <EditText
+                    android:id="@+id/editemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:textSize="17sp"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/body">
+                </EditText>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <!--Contact-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:textColorHint="@color/def"
+                android:layout_weight="1"
+                android:layout_margin="20dp"
+                app:hintTextAppearance="@style/HintText"
+                >
+                <EditText
+                    android:id="@+id/editcontact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/contact"
+                    android:inputType="number"
+                    android:textSize="17sp"
+                    android:textColor="@color/body">
+                </EditText>
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <!--Suggestions or Feedback text-->
+    <TextView
+        android:id="@+id/feedbackTextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Any Suggestions/Feedback?"
+        android:textAlignment="textStart"
+        android:textColor="@color/body"
+        android:textSize="24sp"></TextView>
+
+
+            <!--Write us Edit text-->
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textColorHint="@color/def"
+        app:counterEnabled="true"
+        app:counterMaxLength="250"
+        app:counterOverflowTextAppearance="@style/CounterOverFlow"
+        app:counterTextAppearance="@style/CounterText"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/ErrorText"
+        app:hintTextAppearance="@style/HintText">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/errorFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/write"
+            android:inputType="textMultiLine|textCapSentences"
+            android:lines="4"
+            android:maxLines="4"
+            android:minLines="1"
+            android:textColor="@color/body"
+            android:textColorHint="@color/def"
+            android:textSize="24sp">
+        </android.support.design.widget.TextInputEditText>
+    </android.support.design.widget.TextInputLayout>
+
+
+        <!--SUBMIT button-->
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/submit"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_button"
+            android:text="SUBMIT"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold">
+        </Button>
+
+
+</LinearLayout>
+</ScrollView>

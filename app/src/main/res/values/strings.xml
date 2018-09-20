@@ -1,0 +1,30 @@
+<resources>
+
+    <string name="app_name">IT Technology Day</string>
+
+    <string name="question1">How was your overall experience of Beyond Tomorrow?</string>
+
+    <string name="question2">Any Technology which you liked and may be useful to you?</string>
+
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="contact">Contact</string>
+
+
+    <string-array name="planets_array">
+        <item>Select Technology</item>
+        <item>Artificial Intelligence</item>
+        <item>Business Intelligence</item>
+        <item>Chatbot</item>
+        <item>Google Applications</item>
+        <item>Mobile Technology</item>
+        <item>Process Automation</item>
+        <item>Robotic Process Automation</item>
+        <item>Watson Services</item>
+
+    </string-array>
+
+    <string name="elaboration">Could you elaborate more on what you liked in this technology?</string>
+
+    <string name="write">Write to us</string>
+</resources>
